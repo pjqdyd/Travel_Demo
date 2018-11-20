@@ -42,6 +42,4 @@
       .arrow-icon
         margin-left: .1rem
         font-size: .2rem
-
-
 </style>
