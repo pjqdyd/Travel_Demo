@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper  :options="swiperOption">
 
       <swiper-slide v-for="(page,index) of Pages" :key="index">
 
@@ -22,6 +22,7 @@
     name: "HomeIcons",
     data () {
       return {
+        swiperOption: {},
         iconList: [{
           id: '0001',
           desc: '景点门票',
