@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,8 @@
 <script>
   export default {
     name: "HomeRecommend",
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          title: '万达主题乐园',
-          desc: '红古滩风景区,旅游胜地',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1610/83/83a873f755d64992a3.water.jpg_200x200_f7acbacd.jpg'
-        },{
-          id: '0002',
-          title: '金燕国际温泉',
-          desc: '国际旅游的首选温泉池',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1711/63/6340336461c16842a3.img.png_200x200_ac63191b.png'
-        },{
-          id: '0003',
-          title: '北极天幕温泉',
-          desc: '极地温泉,让你欲罢不能',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/21/67f72f6b54ede94fae27e32d6ba92ae5.jpg_200x200_e85f5596.jpg'
-        },{
-          id: '0004',
-          title: '文化旅游城',
-          desc: '感受中国文化的魅力',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1705/1c/1c9ea91d1d73e159a3.water.jpg_200x200_7d604203.jpg'
-        },]
-      }
+    props: {
+      list: Array
     }
   }
 </script>

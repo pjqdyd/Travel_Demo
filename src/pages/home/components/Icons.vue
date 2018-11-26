@@ -23,49 +23,15 @@
     data () {
       return {
         swiperOption: {},
-        iconList: [{
-          id: '0001',
-          desc: '景点门票',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-        },{
-          id: '0002',
-          desc: '本地玩乐',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png'
-        },{
-          id: '0003',
-          desc: '名胜风景',
-          imgUrl: 'https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png'
-        },{
-          id: '0004',
-          desc: '一日游',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png'
-        },{
-          id: '0005',
-          desc: '游乐场',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png'
-        },{
-          id: '0006',
-          desc: '泡温泉',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png'
-        },{
-          id: '0007',
-          desc: '世界必游',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png'
-        },{
-          id: '0008',
-          desc: '节日景点',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ec/0e1e0238e24ba02.png'
-        },{
-          id: '0009',
-          desc: '万达乐园',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png'
-        }]
       }
+    },
+    props: {
+      list: Array
     },
     computed: {
       Pages () {
         const pages = []
-        this.iconList.forEach((item, index) => {
+        this.list.forEach((item, index) => {
           const page = Math.floor(index / 8)
           if(!pages[page]) {
             pages[page] = []
