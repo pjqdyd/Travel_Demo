@@ -2,7 +2,9 @@
   <div class="header">
     <div class="header-left"><div class="iconfont back-icon">&#xe624;</div></div>
     <div class="header-input"><span class="iconfont">&#xe632;</span>请输入城市/景点/游玩主题</div>
+    <router-link to="/city">
     <div class="header-right">城市<span class="iconfont arrow-icon">&#xe64a;</span></div>
+    </router-link>
   </div>
 </template>
 
@@ -39,6 +41,7 @@
       width: 1.24rem
       float: right
       text-align: center
+      color: #fff
       .arrow-icon
         margin-left: .1rem
         font-size: .2rem
