@@ -33,9 +33,9 @@
       margin-top: .12rem
       margin-left: .2rem
       padding-left: .2rem
-      background: #fff
       boder-radius: .1rem
       color: #ccc
+      background: #fff
       line-height: .64rem
     .header-right
       width: 1.24rem
