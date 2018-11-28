@@ -1,19 +1,18 @@
 <template>
-    <ul class="list">
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-    </ul>
+  <ul class="list">
+    <li class="item" v-for="(item, key) of cities" :key="key">
+      {{key}}
+    </li>
+  </ul>
 </template>
 
 <script>
-    export default {
-        name: "CityAphabet"
+  export default {
+    name: "CityAphabet",
+    props: {
+      cities: Object
     }
+  }
 </script>
 
 <style scoped lang="stylus" type="text/stylus">
