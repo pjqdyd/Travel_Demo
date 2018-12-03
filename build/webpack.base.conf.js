@@ -29,6 +29,7 @@ module.exports = {
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
       'imgs': resolve('static/imgs'),
+      'common': resolve('src/common')
     }
   },
   module: {
