@@ -1,42 +1,50 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img"
-           src="http://img1.qunarzz.com/sight/p0/1711/63/6340336461c16842a3.img.png_600x330_327ce8a2.png"/>
+      <img class="banner-img" :src="bannerImg"/>
       <div class="banner-info">
-        <div class="banner-title">南昌金燕国际温泉</div>
-        <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span>23</div>
+        <div class="banner-title">{{this.sightName}}</div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe692;</span>
+          {{this.gallaryImgs.length}}
+        </div>
       </div>
     </div>
 
-    <common-gallary :imgs="imgs" v-show="showGallary"
-                    @close="handleGallaryClose">
-    </common-gallary>
+    <fade>
+      <common-gallary :imgs="gallaryImgs" v-show="showGallary"
+                      @close="handleGallaryClose">
+      </common-gallary>
+    </fade>
   </div>
 </template>
 <script>
   import CommonGallary from 'common/gallary/Gallary'
+  import Fade from 'common/fade/Fade'
+
   export default {
     name: "DetailBanner",
+    props: {
+      sightName: String,
+      bannerImg: String,
+      gallaryImgs: Array
+    },
     data() {
       return {
-        showGallary: false,
-        imgs: [
-          'http://img1.qunarzz.com/sight/p0/1712/c8/c897cb5da7d9c54da3.img.jpg_r_800x800_04894822.jpg',
-          'http://img1.qunarzz.com/sight/p0/1712/60/607f03ebc8c97f28a3.img.jpg_r_800x800_c9a9bb66.jpg',
-          'http://img1.qunarzz.com/sight/p0/1712/d8/d8b6adcb5d0fcd84a3.img.jpg_r_800x800_3221199f.jpg']
+        showGallary: false
       }
     },
     methods: {
-      handleBannerClick () {
+      handleBannerClick() {
         this.showGallary = true
       },
-      handleGallaryClose () {
+      handleGallaryClose() {
         this.showGallary = false
       }
     },
     components: {
-      CommonGallary
+      CommonGallary,
+      Fade
     }
   }
 </script>
