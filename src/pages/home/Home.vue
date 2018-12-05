@@ -40,7 +40,7 @@
     },
     methods: {
       getHomeInfo() {
-        axios.get('/api/travel/home?city=' + this.city)
+        axios.get('/travel/home?city=' + this.city)
           .then(this.getHomeInfoSucc)
       },
       getHomeInfoSucc(result) {
@@ -52,7 +52,6 @@
           this.recommendList = data.recommendList
           this.weekendList = data.weekendList
         }
-
       }
     },
     mounted() {
