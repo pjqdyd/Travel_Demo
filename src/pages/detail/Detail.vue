@@ -35,7 +35,7 @@
     methods: {
       getDetailInfo() {
         //axios.get('/api/jsons/detail.jsons?id=' + this.$route.params.id)
-        axios.get('/jsons/detail.json', {
+        axios.get(process.env.API_HOST + '/jsons/detail.json', {
           params: { id: this.$route.params.id }
         }).then(this.handleGetDetailSucc)
       },

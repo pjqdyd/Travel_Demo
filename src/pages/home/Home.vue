@@ -40,7 +40,7 @@
     },
     methods: {
       getHomeInfo() {
-        axios.get('/travel/home?city=' + this.city)
+        axios.get(process.env.API_HOST + '/travel/home?city=' + this.city)
           .then(this.getHomeInfoSucc)
       },
       getHomeInfoSucc(result) {
@@ -58,7 +58,7 @@
       this.lastCity = this.city
       this.getHomeInfo()
     },
-    activate() {
+    activated() {
       if (this.lastCity !== this.city) {
         this.lastCity = this.city
         this.getHomeInfo()

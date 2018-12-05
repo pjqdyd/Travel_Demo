@@ -30,7 +30,7 @@
     },
     methods: {
       getCityInfo () {
-        axios.get('/jsons/city.json')
+        axios.get(process.env.API_HOST + '/jsons/city.json')
           .then(this.getCityInfoSucc)
       },
       getCityInfoSucc (result) {
