@@ -59,8 +59,9 @@
       this.lastCity = this.city
       this.getHomeInfo()
     },
-    activate() {
+    activated() {
       if (this.lastCity !== this.city) {
+        console.log(this.city)
         this.lastCity = this.city
         this.getHomeInfo()
       }
