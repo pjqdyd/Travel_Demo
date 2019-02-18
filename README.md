@@ -23,5 +23,5 @@ npm run build --report
 #### 或配置好生产环境的api地址(config/prod.env.js),你也可以运行npm run build打包vue项目, 将打包好的dist下的文件丢进tomcat或你的web服务器, 就可以启动web服务器来访问travel主页了
 ---
 ### 页面截图: (页面的图标或图片都引用自去哪儿官网)
-![演 示](https://github.com/pjqdyd/Travel_Demo/tree/master/static/imgs/demo1.jpg)
+![演 示](https://github.com/pjqdyd/Travel_Demo/blob/master/demo1.jpg)
 
