@@ -24,3 +24,4 @@ npm run build --report
 ---
 ### 页面截图: (页面的图标或图片都引用自去哪儿官网)
 ![演 示](https://github.com/pjqdyd/Travel_Demo/tree/master/static/imgs/demo1.jpg)
+
